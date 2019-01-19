@@ -1,36 +1,59 @@
-body {
-  text-align: center;
-  background-color: #011F3F;
+body
+{
+	/* reste default browser's value */
+	padding: 0;
+	margin: 0;
+
+	text-align: center;
+	background: #011F3F;
 }
 
-#level-title {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 3rem;
-  margin:  5%;
-  color: #FEF2BF;
+*
+{
+	box-sizing: border-box;
 }
 
-.container {
-  display: block;
-  width: 50%;
-  margin: auto;
-
+h1
+{
+	font-family: 'Press Start 2P', cursive;
+	font-size: 2em;
+	line-height: 1.5em;
+	margin:	5%;
+	color: #FEF2BF;
 }
 
-.btn {
-  margin: 25px;
-  display: inline-block;
-  height: 200px;
-  width: 200px;
-  border: 10px solid black;
-  border-radius: 20%;
+ul
+{
+	/* reset default */
+	padding: 0;
+
+	list-style: none;
+	font-size: 0;
+	max-width: 460px;
+	margin: 0 auto;
 }
 
-.game-over {
-  background-color: red;
-  opacity: 0.8;
+li
+{
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	width: calc(50% - 20px);
+	margin: 10px;
+	padding: 0;
+	border: 10px solid black;
+	border-radius: 20%;
 }
 
+li::before
+{
+	/* Toujours mettre un "content" vide */
+	content: "";
+	display: block;
+	margin-top: 100%;
+}
+
+/* définition des couleurs */
 .red {
   background-color: red;
 }
@@ -47,7 +70,14 @@ body {
   background-color: yellow;
 }
 
-.pressed {
-  box-shadow: 0 0 20px white;
-  background-color: grey;
+.pressed
+{
+	box-shadow: 0 0 20px white;
+	background: grey;
+}
+
+.game-over
+{
+	background: red;
+	opacity: 0.8;
 }
